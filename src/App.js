@@ -17,8 +17,20 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
-		setCart(item);
+
+		const newItem = {
+			id: item.id,
+			title: item.title,
+			price: item.price,
+			image: item.image
+		  };
+	  
+		  setCart([...cart, newItem]);
+		
 	};
+
+	console.log('cart: ', cart)
+
 
 	return (
 		<div className="App">
